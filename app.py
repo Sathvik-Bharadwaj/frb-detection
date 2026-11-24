@@ -292,7 +292,7 @@ with tab_repro:
 
     c1, c2 = st.columns(2)
     with c1:
-        st.markdown("**1. Unit tests** (about 35 s): delay formula, search and thresholds.")
+        st.markdown("**1. Unit tests** (about 35 s on a laptop, up to 2 min online): delay formula, search and thresholds.")
         if st.button("Run the tests", width="stretch"):
             with st.spinner("Running tests..."):
                 out = subprocess.run([sys.executable, "-m", "pytest", "-v", "--color=no"], cwd=root,
@@ -301,7 +301,7 @@ with tab_repro:
                 "All tests passed" if out.returncode == 0 else "Some tests failed")
             st.code(out.stdout[-4000:] + out.stderr[-2000:], language="text")
     with c2:
-        st.markdown("**2. Re-train from scratch** (about 40 s): rebuilds run 1 and compares it with the saved results.")
+        st.markdown("**2. Re-train from scratch** (about 40 s on a laptop, up to 2 min online): rebuilds run 1 and compares it with the saved results.")
         if st.button("Re-train run 1 and compare", width="stretch", type="primary"):
             with st.spinner("Simulating 14,400 windows, training and evaluating..."):
                 out = subprocess.run([sys.executable, str(root / "scripts/check_reproducible.py")], cwd=root,

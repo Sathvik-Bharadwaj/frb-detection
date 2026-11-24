@@ -3,6 +3,14 @@
 Everything (demo, prototype, results, reproducibility check, code) is in **one app**.
 No typing is needed.
 
+## Links to give the professor
+
+- **App (online):** https://frb-detection.streamlit.app
+- **Code:** https://github.com/Sathvik-Bharadwaj/frb-detection
+
+For the presentation itself, use the copy on your laptop (below), because it doesn't depend on Wi-Fi.
+If the online app has been unused for a few days it shows a "wake up" button and takes about a minute.
+
 ## Starting the app
 
 1. Open the `FRB_Demo` folder on the Desktop.
@@ -57,6 +65,11 @@ Changing the noise seed gives a different background.
 - Exact library versions are pinned in `requirements-lock.txt`.
 - Each run's `metrics.json` records the versions and a fingerprint (SHA-256 hash) of the code.
 - The Reproducibility tab re-trains from scratch, live, and gets identical numbers.
+- **If he asks about the online version:** it runs on a Linux server with a different processor (x86_64) from your Mac (Apple silicon).
+  There, all 18,000 accept/reject decisions and every count are identical, and every recall number matches.
+  Only the last digits of the scores differ, by about 1 part in 500,000.
+  That's because different processors round single-precision (float32) sums slightly differently.
+  On the same kind of computer it is identical bit for bit.
 
 ## If something goes wrong
 

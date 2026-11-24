@@ -44,6 +44,11 @@ python scripts/run_experiment.py --train 40 --calibration 40 --test 40 --seed-ba
 
 ## Project app (demo, results, reproducibility check and code)
 
+**Online:** https://frb-detection.streamlit.app (no installation needed; if it has
+been idle it shows a "wake up" button and takes about a minute to start).
+
+**On your own computer:**
+
 Double-click `Start Demo.command`, or run `.venv/bin/streamlit run app.py`,
 then open http://localhost:8501. The first run sets everything up
 automatically. See `DEMO_GUIDE.md`.
