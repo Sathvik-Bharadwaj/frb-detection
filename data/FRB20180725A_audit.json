@@ -1,0 +1,112 @@
+{
+  "file": "data/raw/FRB20180725A_waterfall.h5",
+  "bytes": 35527920,
+  "sha256": "783ddfbfbaf4ac1ef0b903adfb08564b015c1de9c3e93051bc2e2ca3e617c0b4",
+  "root_attributes": {},
+  "objects": [
+    {
+      "path": "frb",
+      "type": "Group",
+      "attrs": {
+        "calibration_observation_date": "b'2018-09-29'",
+        "calibration_source_name": "b'SNR_G130.7+03.1'",
+        "dm": "715.8092661658914",
+        "scatterfit": "True",
+        "tns_name": "b'FRB20180725A'"
+      }
+    },
+    {
+      "path": "frb/calibrated_wfall",
+      "type": "Dataset",
+      "attrs": {},
+      "shape": [
+        16384,
+        192
+      ],
+      "dtype": "float64"
+    },
+    {
+      "path": "frb/extent",
+      "type": "Dataset",
+      "attrs": {},
+      "shape": [
+        4
+      ],
+      "dtype": "float64"
+    },
+    {
+      "path": "frb/model_spec",
+      "type": "Dataset",
+      "attrs": {},
+      "shape": [
+        16384
+      ],
+      "dtype": "float64"
+    },
+    {
+      "path": "frb/model_ts",
+      "type": "Dataset",
+      "attrs": {},
+      "shape": [
+        38
+      ],
+      "dtype": "float64"
+    },
+    {
+      "path": "frb/model_wfall",
+      "type": "Dataset",
+      "attrs": {},
+      "shape": [
+        16384,
+        38
+      ],
+      "dtype": "float64"
+    },
+    {
+      "path": "frb/plot_freq",
+      "type": "Dataset",
+      "attrs": {},
+      "shape": [
+        16384
+      ],
+      "dtype": "float64"
+    },
+    {
+      "path": "frb/plot_time",
+      "type": "Dataset",
+      "attrs": {},
+      "shape": [
+        38
+      ],
+      "dtype": "float64"
+    },
+    {
+      "path": "frb/spec",
+      "type": "Dataset",
+      "attrs": {},
+      "shape": [
+        16384
+      ],
+      "dtype": "float64"
+    },
+    {
+      "path": "frb/ts",
+      "type": "Dataset",
+      "attrs": {},
+      "shape": [
+        38
+      ],
+      "dtype": "float64"
+    },
+    {
+      "path": "frb/wfall",
+      "type": "Dataset",
+      "attrs": {},
+      "shape": [
+        16384,
+        38
+      ],
+      "dtype": "float64"
+    }
+  ]
+}

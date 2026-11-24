@@ -1,0 +1,87 @@
+{
+  "chime_profile": {
+    "fwhm_ms": 1.9660799880512059,
+    "energy_fraction_600_700MHz": 0.8652119167207519,
+    "channels_with_data": 28
+  },
+  "features": {
+    "peak_boxcar_snr": {
+      "mean_coefficient": 2.8672787926941674,
+      "median_simulated_pulse": 10.223159490398324,
+      "median_chime_pulse": 5.766658723354338,
+      "median_no_pulse": 4.088329657912254
+    },
+    "best_dm": {
+      "mean_coefficient": -0.17470970797745353,
+      "median_simulated_pulse": 80.0,
+      "median_chime_pulse": 80.0,
+      "median_no_pulse": 68.0
+    },
+    "zero_dm_score": {
+      "mean_coefficient": 0.2871645610561905,
+      "median_simulated_pulse": 3.594122200535061,
+      "median_chime_pulse": 3.137802988290786,
+      "median_no_pulse": 3.0816273223608732
+    },
+    "nonzero_dm_excess": {
+      "mean_coefficient": 3.9832454224536877,
+      "median_simulated_pulse": 4.892760921051515,
+      "median_chime_pulse": 1.860126732268479,
+      "median_no_pulse": 0.8853050730075116
+    },
+    "dm_peak_contrast": {
+      "mean_coefficient": -5.351218957729959,
+      "median_simulated_pulse": 6.079684574483977,
+      "median_chime_pulse": 2.665320299887804,
+      "median_no_pulse": 1.0964003556152833
+    },
+    "best_width_samples": {
+      "mean_coefficient": 0.7314672403447943,
+      "median_simulated_pulse": 8.0,
+      "median_chime_pulse": 2.0,
+      "median_no_pulse": 2.0
+    },
+    "channel_participation": {
+      "mean_coefficient": 1.748855946034098,
+      "median_simulated_pulse": 0.90625,
+      "median_chime_pulse": 0.625,
+      "median_no_pulse": 0.59375
+    },
+    "largest_channel_fraction": {
+      "mean_coefficient": -0.3173573983898171,
+      "median_simulated_pulse": 0.06775634363178384,
+      "median_chime_pulse": 0.10445693893585584,
+      "median_no_pulse": 0.09759437476895556
+    },
+    "dm_score_spread": {
+      "mean_coefficient": 2.9665394337753894,
+      "median_simulated_pulse": 1.9951216437639203,
+      "median_chime_pulse": 0.6275374263171205,
+      "median_no_pulse": 0.3938007200327426
+    },
+    "input_max": {
+      "mean_coefficient": -0.03248259589499345,
+      "median_simulated_pulse": 4.12327766418457,
+      "median_chime_pulse": 5.294466257095337,
+      "median_no_pulse": 4.1092541217803955
+    }
+  },
+  "winning_width_fraction": {
+    "2": {
+      "simulated": 0.099,
+      "chime": 0.7508333333333334
+    },
+    "4": {
+      "simulated": 0.12733333333333333,
+      "chime": 0.18666666666666668
+    },
+    "8": {
+      "simulated": 0.457,
+      "chime": 0.04666666666666667
+    },
+    "16": {
+      "simulated": 0.31666666666666665,
+      "chime": 0.015833333333333335
+    }
+  }
+}

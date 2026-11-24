@@ -1,0 +1,24 @@
+{
+  "event": "FRB20180725A",
+  "source_tutorial": "https://chime-frb-open-data.github.io/waterfall/",
+  "download_url": "https://cadc-west-01.canfar.net/vault/files/AstroDataCitationDOI/CISTI.CANFAR/21.0007/data/waterfalls/data/FRB20180725A_waterfall.h5",
+  "download_date_local": "2026-10-20",
+  "bytes": 35527920,
+  "sha256": "783ddfbfbaf4ac1ef0b903adfb08564b015c1de9c3e93051bc2e2ca3e617c0b4",
+  "archive_md5_verified": true,
+  "frequency_unit": "MHz",
+  "plot_time_unit": "ms",
+  "unit_source": "official waterfall tutorial axis labels",
+  "wfall_shape": [
+    16384,
+    38
+  ],
+  "time_step_ms": 0.9830399940256029,
+  "dm_metadata": 715.8092661658914,
+  "invalid_fraction_wfall": 0.4033203125,
+  "dedispersion_state": "catalogue waterfall is dedispersed to the fitted DM, per Catalog 1 section 3.2 and Figures 7-8",
+  "current_use": "processed time-profile sanity check and semi-synthetic fitted-profile transfer; not a blind survey",
+  "paper_doi": "10.3847/1538-4365/ac33ab",
+  "frequency_axis_note": "wfall and model_wfall rows run opposite to ascending plot_freq; reader reverses rows; fitted-spectrum correlation confirms orientation",
+  "checked_date_local": "2026-11-04"
+}

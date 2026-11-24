@@ -1,0 +1,11 @@
+[browser]
+gatherUsageStats = false
+
+[server]
+port = 8501
+address = "localhost"
+fileWatcherType = "none"
+
+[theme]
+base = "light"
+primaryColor = "#183f5b"

@@ -1,0 +1,300 @@
+{
+  "runs": 3,
+  "examples_per_run": 12400,
+  "conditions": {
+    "test_familiar": {
+      "classical": {
+        "tp": 31,
+        "fp": 32,
+        "tn": 2968,
+        "fn": 2969,
+        "recall": 0.010333333333333333,
+        "false_positive_rate": 0.010666666666666666,
+        "recall_95ci": [
+          0.007289298235467279,
+          0.014629833585598122
+        ],
+        "fpr_95ci": [
+          0.007565855531414626,
+          0.01501909035920757
+        ],
+        "run_recall": [
+          0.01,
+          0.01,
+          0.011
+        ],
+        "run_fpr": [
+          0.014,
+          0.008,
+          0.01
+        ],
+        "mean_average_precision": 0.7446055286060144
+      },
+      "classical_dm_contrast": {
+        "tp": 2236,
+        "fp": 32,
+        "tn": 2968,
+        "fn": 764,
+        "recall": 0.7453333333333333,
+        "false_positive_rate": 0.010666666666666666,
+        "recall_95ci": [
+          0.7294360087440364,
+          0.760603146449766
+        ],
+        "fpr_95ci": [
+          0.007565855531414626,
+          0.01501909035920757
+        ],
+        "run_recall": [
+          0.739,
+          0.73,
+          0.767
+        ],
+        "run_fpr": [
+          0.011,
+          0.012,
+          0.009
+        ],
+        "mean_average_precision": 0.9086456717042198
+      },
+      "physics_features_logistic": {
+        "tp": 2531,
+        "fp": 35,
+        "tn": 2965,
+        "fn": 469,
+        "recall": 0.8436666666666667,
+        "false_positive_rate": 0.011666666666666667,
+        "recall_95ci": [
+          0.8302321214019142,
+          0.8562221843111435
+        ],
+        "fpr_95ci": [
+          0.008400639851992561,
+          0.016181748247300027
+        ],
+        "run_recall": [
+          0.835,
+          0.838,
+          0.858
+        ],
+        "run_fpr": [
+          0.008,
+          0.013,
+          0.014
+        ],
+        "mean_average_precision": 0.9801235893026936
+      }
+    },
+    "test_unseen_interference": {
+      "classical": {
+        "tp": 35,
+        "fp": 36,
+        "tn": 2964,
+        "fn": 2965,
+        "recall": 0.011666666666666667,
+        "false_positive_rate": 0.012,
+        "recall_95ci": [
+          0.008400639851992561,
+          0.016181748247300027
+        ],
+        "fpr_95ci": [
+          0.008680487365320785,
+          0.016567714803528602
+        ],
+        "run_recall": [
+          0.011,
+          0.009,
+          0.015
+        ],
+        "run_fpr": [
+          0.013,
+          0.008,
+          0.015
+        ],
+        "mean_average_precision": 0.7572058668231877
+      },
+      "classical_dm_contrast": {
+        "tp": 2268,
+        "fp": 19,
+        "tn": 2981,
+        "fn": 732,
+        "recall": 0.756,
+        "false_positive_rate": 0.006333333333333333,
+        "recall_95ci": [
+          0.7403097449386089,
+          0.7710354604810112
+        ],
+        "fpr_95ci": [
+          0.004058313464774081,
+          0.009871049521609757
+        ],
+        "run_recall": [
+          0.763,
+          0.744,
+          0.761
+        ],
+        "run_fpr": [
+          0.005,
+          0.004,
+          0.01
+        ],
+        "mean_average_precision": 0.9170640316847473
+      },
+      "physics_features_logistic": {
+        "tp": 2617,
+        "fp": 51,
+        "tn": 2949,
+        "fn": 383,
+        "recall": 0.8723333333333333,
+        "false_positive_rate": 0.017,
+        "recall_95ci": [
+          0.8599133454999923,
+          0.8838009701949499
+        ],
+        "fpr_95ci": [
+          0.012953675419908658,
+          0.022281737792292682
+        ],
+        "run_recall": [
+          0.875,
+          0.864,
+          0.878
+        ],
+        "run_fpr": [
+          0.014,
+          0.012,
+          0.025
+        ],
+        "mean_average_precision": 0.9827052843629561
+      }
+    },
+    "test_scattered": {
+      "classical": {
+        "tp": 32,
+        "fp": 33,
+        "tn": 2967,
+        "fn": 2968,
+        "recall": 0.010666666666666666,
+        "false_positive_rate": 0.011,
+        "recall_95ci": [
+          0.007565855531414626,
+          0.01501909035920757
+        ],
+        "fpr_95ci": [
+          0.007843289809706588,
+          0.015407470150472407
+        ],
+        "run_recall": [
+          0.01,
+          0.008,
+          0.014
+        ],
+        "run_fpr": [
+          0.013,
+          0.014,
+          0.006
+        ],
+        "mean_average_precision": 0.7421666002815493
+      },
+      "classical_dm_contrast": {
+        "tp": 2210,
+        "fp": 24,
+        "tn": 2976,
+        "fn": 790,
+        "recall": 0.7366666666666667,
+        "false_positive_rate": 0.008,
+        "recall_95ci": [
+          0.7206101647029707,
+          0.7521178246823551
+        ],
+        "fpr_95ci": [
+          0.005381874737131623,
+          0.011876558597036199
+        ],
+        "run_recall": [
+          0.741,
+          0.741,
+          0.728
+        ],
+        "run_fpr": [
+          0.009,
+          0.007,
+          0.008
+        ],
+        "mean_average_precision": 0.9103947279238831
+      },
+      "physics_features_logistic": {
+        "tp": 2655,
+        "fp": 33,
+        "tn": 2967,
+        "fn": 345,
+        "recall": 0.885,
+        "false_positive_rate": 0.011,
+        "recall_95ci": [
+          0.8730882539403156,
+          0.8959269963977848
+        ],
+        "fpr_95ci": [
+          0.007843289809706588,
+          0.015407470150472407
+        ],
+        "run_recall": [
+          0.883,
+          0.879,
+          0.893
+        ],
+        "run_fpr": [
+          0.011,
+          0.011,
+          0.011
+        ],
+        "mean_average_precision": 0.9851719266004562
+      }
+    }
+  },
+  "timing": {
+    "examples": 40,
+    "median_ms": 2.2335420071613044,
+    "p95_ms": 2.549893458490259
+  },
+  "chime": {
+    "event": "FRB20180725A",
+    "catalogue_dm": 715.8092661658914,
+    "shape": [
+      16384,
+      38
+    ],
+    "time_step_ms": 0.9830399940256029,
+    "missing_fraction": 0.4033203125,
+    "measured_peak_ms": 13.27103991934564,
+    "released_peak_ms": 13.27103991934564,
+    "peak_agreement_samples": 0,
+    "model_channels_available": 28,
+    "semi_synthetic": {
+      "classical": {
+        "tp": 18,
+        "fp": 13,
+        "positives": 1200,
+        "negatives": 1200,
+        "recall": 0.015,
+        "false_positive_rate": 0.010833333333333334
+      },
+      "classical_dm_contrast": {
+        "tp": 505,
+        "fp": 6,
+        "positives": 1200,
+        "negatives": 1200,
+        "recall": 0.42083333333333334,
+        "false_positive_rate": 0.005
+      },
+      "physics_features_logistic": {
+        "tp": 181,
+        "fp": 10,
+        "positives": 1200,
+        "negatives": 1200,
+        "recall": 0.15083333333333335,
+        "false_positive_rate": 0.008333333333333333
+      }
+    }
+  }
+}
