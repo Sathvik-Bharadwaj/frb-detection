@@ -285,8 +285,10 @@ with tab_repro:
                                              "scikit_learn": __import__("sklearn").__version__,
                                              "scipy": __import__("scipy").__version__}})
     st.table(versions)
-    st.caption("A different Python patch release (3.12.x) does not change any numerical library, "
-               "so the results are identical, as the re-train check below shows.")
+    st.caption(f"This computer: {platform.system()} on {platform.machine()}. The saved results were made on "
+               "macOS on Apple silicon (arm64). On the same kind of computer the re-train is identical bit for "
+               "bit. On a different processor the last digits of floating point sums can round differently, so "
+               "the check also compares every decision and count, and reports the largest numeric difference.")
 
     c1, c2 = st.columns(2)
     with c1:
@@ -304,8 +306,9 @@ with tab_repro:
             with st.spinner("Simulating 14,400 windows, training and evaluating..."):
                 out = subprocess.run([sys.executable, str(root / "scripts/check_reproducible.py")], cwd=root,
                                      capture_output=True, text=True)
-            (st.success if out.returncode == 0 else st.error)(
-                "Identical to the saved results" if out.returncode == 0 else "Results differ")
+            verdict = next((line for line in out.stdout.splitlines() if line.startswith("RESULT:")),
+                           "RESULT: the check did not finish.")
+            (st.success if out.returncode == 0 else st.error)(verdict.removeprefix("RESULT: ").capitalize())
             st.code(out.stdout[-4000:] + out.stderr[-2000:], language="text")
 
 # ---------------------------------------------------------------- code
