@@ -6,7 +6,8 @@
 Three levels are checked:
 1. bit for bit: the output files are byte-identical (expected on the same kind of computer);
 2. decisions: every accept/reject decision and every TP/FP/TN/FN count is the same;
-3. numbers: the largest difference in any score, threshold or metric.
+3. numbers: the largest relative difference in any score, threshold or metric
+   (must be below 1e-5; the search runs in float32, which keeps about 7 significant digits).
 
 Different processors (for example Apple silicon and an Intel/AMD cloud server) can
 round the last digits of floating point sums differently, so level 1 may fail across
@@ -25,7 +26,8 @@ from pathlib import Path
 root = Path(__file__).resolve().parents[1]
 seeds = {1: 10_000_000, 2: 20_000_000, 3: 30_000_000}
 METHODS = ["classical", "classical_dm_contrast", "physics_features_logistic"]
-TOLERANCE = 1e-6
+# relative tolerance: the search runs in float32 (about 7 significant digits)
+TOLERANCE = 1e-5
 
 
 def compare_json(a, b, path=""):
@@ -42,7 +44,7 @@ def compare_json(a, b, path=""):
             mismatches += m
             largest = max(largest, d)
     elif isinstance(a, float) or isinstance(b, float):
-        largest = abs(float(a) - float(b))
+        largest = abs(float(a) - float(b)) / max(1.0, abs(float(a)))
     elif a != b:
         mismatches.append(path)
     return mismatches, largest
@@ -80,7 +82,8 @@ for o, n in zip(old_rows, new_rows):
         threshold_old = old[o["split"]][method]["threshold"]
         threshold_new = new[n["split"]][method]["threshold"]
         decision_changes += (float(o[method]) > threshold_old) != (float(n[method]) > threshold_new)
-        score_diff = max(score_diff, abs(float(o[method]) - float(n[method])))
+        a, b = float(o[method]), float(n[method])
+        score_diff = max(score_diff, abs(a - b) / max(1.0, abs(a)))
 same_examples = len(old_rows) == len(new_rows) and all(
     o["example_id"] == n["example_id"] and o["seed"] == n["seed"] for o, n in zip(old_rows, new_rows))
 
@@ -93,8 +96,8 @@ print()
 print(f"Same {len(old_rows):,} test examples (same seeds):  {same_examples}")
 print(f"TP/FP/TN/FN counts identical:          {not count_mismatches}")
 print(f"Accept/reject decisions that changed:  {decision_changes} of {len(old_rows) * len(METHODS):,}")
-print(f"Largest difference in any score:       {score_diff:.1e}")
-print(f"Largest difference in any metric:      {metric_diff:.1e}")
+print(f"Largest relative difference in a score: {score_diff:.1e}  (about 1 part in {1 / score_diff:,.0f})" if score_diff else "Largest relative difference in a score: 0")
+print(f"Largest relative difference in a metric: {metric_diff:.1e}")
 print(f"Bit for bit identical files:           {bitwise}")
 print()
 
