@@ -30,19 +30,22 @@ If macOS says the file "cannot be opened", right-click it, choose **Open**, then
 | **Overview** | Explanation and pipeline figure | The problem and the 5 steps |
 | **Live demo** | The prototype. Let the professor choose the inputs. | Below |
 | **Results** | Main table and figures | Learned model wins on simulated data, baseline wins on the real CHIME pulse shape |
-| **Reproducibility** | Click **Re-train run 1 and compare** (about 40 s) | Shows "Identical to the saved results": same seeds give the same numbers |
+| **Reproducibility** | Click **Re-train run 1 and compare** (about 40 s) | Shows "Identical, bit for bit": same seeds give the same numbers |
 | **Code** | Pick any file from the list | The core is in `src/frb/` |
 
 ## Live demo: three ways to give an input
 
-- **Random simulated window:** the professor types any seed number. The same seed always gives the same window, and that is reproducibility.
+Pick one at the top of the Live demo tab:
+
+- **Simulate a window:** the professor types any seed number. The same seed always gives the same window, and that is reproducibility.
   Turn off "Hide a burst in the window" to show it correctly says "No burst" on pure noise.
-- **Design your own pulse:** sliders for DM, SNR, width, arrival time and scattering.
-  The table shows what the search found next to what was actually injected.
-- **Upload a data file:** a `.csv` or `.npy` file with 32 rows (channels, first row = 600 MHz) and 512 columns.
+- **Example files:** three ready-made files: a bright burst, a faint burst, and a window with no burst.
+  The faint one is the best to show: the learned model finds it and the baseline misses it.
+- **Upload a file:** a `.csv` or `.npy` file with 32 rows (channels, first row = 600 MHz) and 512 columns.
   "Download an example file" gives a file in the right format.
 
-Below the plots there is a **Trial DM slider**. Drag it and the curved sweep straightens into a sharp pulse at the right DM. It is a good visual moment.
+Each time you see: the two decisions, a table of what the search found next to what was really in the window,
+and three plots. In plot 1 a burst is a curved sweep; in plot 3 it is straightened into a vertical line.
 
 ## If he picks a faint pulse
 

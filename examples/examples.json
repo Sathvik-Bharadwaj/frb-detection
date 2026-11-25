@@ -1,0 +1,50 @@
+[
+  {
+    "file": "example_window.csv",
+    "title": "Bright burst",
+    "description": "A clear burst. Both methods should find it.",
+    "truth": {
+      "seed": 2024,
+      "label": 1,
+      "distribution": "familiar",
+      "rfi": "narrowband",
+      "dm": 134.41671877434084,
+      "arrival_s": 0.3551023876420446,
+      "width_s": 0.0172581736588157,
+      "injected_template_snr": 15.232660653277966,
+      "scatter_s": 0.0
+    }
+  },
+  {
+    "file": "faint_burst.csv",
+    "title": "Faint burst",
+    "description": "A weak burst (SNR 6.3). The learned model finds it; the baseline misses it.",
+    "truth": {
+      "seed": 5434,
+      "label": 1,
+      "distribution": "familiar",
+      "rfi": "narrowband",
+      "dm": 108.34536925796489,
+      "arrival_s": 0.5404005754144688,
+      "width_s": 0.015831139649535128,
+      "injected_template_snr": 6.308984954887532,
+      "scatter_s": 0.0
+    }
+  },
+  {
+    "file": "noise_only.csv",
+    "title": "No burst",
+    "description": "Noise and a short burst of interference, but no FRB. Both methods should say there is no burst.",
+    "truth": {
+      "seed": 5002,
+      "label": 0,
+      "distribution": "familiar",
+      "rfi": "impulse",
+      "dm": null,
+      "arrival_s": null,
+      "width_s": null,
+      "injected_template_snr": null,
+      "scatter_s": 0.0
+    }
+  }
+]

@@ -66,7 +66,9 @@ python scripts/detect.py --input examples/example_window.csv  # your own 32 x 51
 ```
 
 Input files are 32 channels (row 0 = 600 MHz, row 31 = 800 MHz) by 512
-samples of 4 ms, as `.npy` or `.csv`.
+samples of 4 ms, as `.npy` or `.csv`. The three example files in `examples/`
+(bright burst, faint burst, no burst) are made from fixed seeds by
+`python scripts/make_examples.py`.
 
 To check that the saved results are reproduced exactly (about 40 s):
 
